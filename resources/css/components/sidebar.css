@@ -1,0 +1,45 @@
+.sidebar {
+  @apply md:bg-sidebarColor;
+
+  @apply w-full md:h-screen md:w-1/4 px-16 md:pt-8 md:top-0 md:left-0 h-16;
+  @apply sticky;
+
+  @apply flex flex-col items-center;
+}
+
+.item {
+  @apply flex;
+  @apply mb-2;
+}
+
+.item:hover .item-icon,
+.item:hover .item-text {
+  @apply fill-current text-lightTextColor;
+  @apply text-lightTextColor;
+}
+
+.item-icon {
+  @apply w-6 h-6 mr-2;
+  @apply fill-current text-darkTextColor;
+}
+
+.item-text {
+  @apply text-darkTextColor;
+  @apply font-mont font-semibold;
+}
+
+.active {
+  @apply text-lightTextColor;
+}
+
+.inactive {
+  @apply text-darkTextColor;
+}
+
+.category-header {
+  @apply text-darkTextColor opacity-50;
+  @apply font-mont font-semibold;
+  @apply text-sm;
+
+  @apply mr-5;
+}

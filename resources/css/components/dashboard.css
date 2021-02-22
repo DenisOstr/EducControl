@@ -1,0 +1,54 @@
+.main {
+    @apply w-full h-full;
+    @apply m-14;
+}
+
+.header {
+    @apply flex flex-row justify-between;
+    @apply mb-7;
+}
+
+.title {
+    @apply text-darkTextColor;
+    @apply font-medium text-3xl;
+}
+
+.button-container {
+    @apply flex justify-end items-end;
+}
+
+.add-button {
+    @apply bg-buttonColor;
+    @apply w-10 h-10;
+    @apply rounded-lg;
+
+    @apply flex justify-center items-center;
+
+    @apply shadow-3xl;
+}
+
+.add-button svg {
+    @apply fill-current text-white;
+}
+
+.statistics-block {
+    @apply bg-white;
+    @apply w-full h-60;
+
+    @apply mb-10;
+}
+
+.table-blocks {
+    @apply flex flex-row justify-between;
+}
+
+.table-block {
+    @apply bg-white;
+    @apply w-12/25 h-56;
+}
+
+.statistics-block,
+.table-block {
+    @apply rounded-lg;
+    @apply shadow-md;
+}

@@ -1,0 +1,5 @@
+.base {
+  @apply bg-mainDashboardColor;
+  @apply w-full h-full;
+  @apply flex;
+}
