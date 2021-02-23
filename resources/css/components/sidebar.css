@@ -12,15 +12,13 @@
   @apply mb-2;
 }
 
-.item:hover .item-icon,
-.item:hover .item-text {
-  @apply fill-current text-lightTextColor;
-  @apply text-lightTextColor;
-}
-
 .item-icon {
   @apply w-6 h-6 mr-2;
-  @apply fill-current text-darkTextColor;
+}
+
+.item:hover .item-icon,
+.item:hover .item-text {
+  @apply text-lightTextColor;
 }
 
 .item-text {

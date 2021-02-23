@@ -1,0 +1,31 @@
+.statistics-block {
+    @apply bg-white;
+    @apply w-full h-60;
+
+    @apply flex justify-around items-center;
+
+    @apply mb-10;
+}
+
+.statistic-item {
+    @apply w-52 h-52;
+
+    @apply flex flex-col justify-around items-center;
+}
+
+.statistic-item-header {
+    @apply text-darkTextColor;
+    @apply font-extrabold;
+    @apply text-xl;
+}
+
+.statistic-item-icon {
+    @apply fill-current text-lightTextColor;
+    @apply w-12 h-12;
+}
+
+.statistic-item-info {
+    @apply text-lightTextColor;
+    @apply font-medium;
+    @apply text-3xl;
+}
