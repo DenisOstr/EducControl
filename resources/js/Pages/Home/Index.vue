@@ -3,12 +3,9 @@
         <div class="main">
             <top-section :title="title()" />
 
-            <div class="statistics-block"></div>
+            <infographics />
 
-            <div class="table-blocks">
-                <div class="table-block"></div>
-                <div class="table-block"></div>
-            </div>
+            <tables />
         </div>
     </layout>
 </template>
@@ -16,11 +13,15 @@
 <script>
     import Layout from '../../Layouts/Layout'
     import TopSection from '../../Components/TopSection'
+    import Infographics from '../../Components/Infographics'
+    import Tables from '../../Components/Tables'
 
     export default {
         components: {
             Layout,
             TopSection,
+            Infographics,
+            Tables,
         },
         methods: {
             title() {
