@@ -1,27 +1,25 @@
-.table-blocks {
-    @apply flex flex-row justify-between;
-}
-
-.table-block {
-    @apply bg-white;
-    @apply w-12/25 h-56;
-
-    @apply p-3;
-}
-
 .table-header {
     @apply bg-lightTextColor bg-opacity-10;
     @apply text-lightTextColor opacity-100;
     @apply font-medium text-xs;
 
     @apply text-left;
+
+    @apply flex justify-between;
+    @apply p-1;
     
     @apply border-b-2 border-solid border-lightTextColor;
+}
+
+.table-body {
+    @apply flex flex-col overflow-y-auto;
 }
 
 .table-body-item {
     @apply text-lightTextColor;
     @apply font-medium text-sm;
+
+    @apply flex justify-between;
 }
 
 .table-body-item td {

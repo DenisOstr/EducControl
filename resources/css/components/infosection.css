@@ -1,0 +1,10 @@
+.info-blocks {
+    @apply flex flex-row justify-between;
+}
+
+.info-block {
+    @apply bg-white;
+    @apply w-12/25 h-56;
+
+    @apply p-2;
+}

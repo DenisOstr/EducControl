@@ -4,11 +4,12 @@
 }
 
 .statistics-block,
-.table-block {
+.info-block {
     @apply rounded-lg;
     @apply shadow-md;
 }
 
 @import "topsection.css";
 @import "infographics.css";
+@import "infosection.css";
 @import "tables.css";
