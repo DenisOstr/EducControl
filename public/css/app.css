@@ -165,20 +165,19 @@
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.table-blocks {
+.info-blocks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.table-block {
+.info-block {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   height: 14rem;
   width: 48%;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
-
 .table-header {
   --tw-bg-opacity: 1;
   background-color: rgba(70, 107, 181, var(--tw-bg-opacity));
@@ -190,10 +189,19 @@
   font-size: 0.75rem;
   line-height: 1rem;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem;
   --tw-border-opacity: 1;
   border-color: rgba(70, 107, 181, var(--tw-border-opacity));
   border-style: solid;
   border-bottom-width: 2px;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .table-body-item {
@@ -202,6 +210,8 @@
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .table-body-item td {
@@ -214,11 +224,11 @@
   margin: 3.5rem;
 }
 
-.statistics-block, .table-block {
+.statistics-block, .info-block {
   border-radius: 0.5rem;
 }
 
-.statistics-block, .table-block {
+.statistics-block, .info-block {
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
