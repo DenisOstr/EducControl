@@ -1,7 +1,7 @@
 <template>
     <layout>
         <div class="main">
-            <top-section :title="title()" />
+            <top-section :title="title()" :routeUrl="route()"/>
 
             <infographics :groups="groups" :students="students" :projects="projects" />
 
@@ -41,6 +41,9 @@
         methods: {
             title() {
                 return 'Dashboard'
+            },
+            route() {
+                return 'students.add'
             }
         }
     }

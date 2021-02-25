@@ -1,7 +1,7 @@
 <template>
     <layout>
         <div class="main">
-            <top-section :title="title()" />
+            <top-section :title="title()" :searchExist="true" :routeUrl="route()" />
 
             <div class="statistics-block">
                 <div class="w-full h-56 px-2">
@@ -18,11 +18,14 @@
                     </div>
                 </div>
                 <div class="info-block">
-                    <div>
+                    <div class="statistic-item w-full">
                         <h1 class="statistic-item-header">Top Group</h1>
-                        <p>{{ topGroup.group_code }}</p>
-                        <p>{{ topGroup.group_name }}</p>
-                        <p>{{ topGroup.score }}</p>
+                        <div class="flex">
+                            <p class="text-darkTextColor font-medium text-xl">{{ topGroup.group_code }}</p>
+                            <svg class="delimeter" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+                            <p class="text-darkTextColor font-bold text-xl">{{ topGroup.group_name }}</p>
+                        </div>
+                        <p class="score-item">{{ topGroup.score }}</p>
                     </div>
                 </div>
             </div>
@@ -48,6 +51,9 @@
         methods: {
             title() {
                 return 'Groups'
+            },
+            route() {
+                return 'groups.add'
             }
         }
     }
