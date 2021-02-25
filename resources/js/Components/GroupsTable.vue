@@ -45,8 +45,6 @@
                         modifier = -1;
                     }
 
-                    console.log();
-
                     if (a[this.sortKey] < b[this.sortKey]) {
                         return -1 * modifier;
                     } else if (a[this.sortKey] > b[this.sortKey]) {
