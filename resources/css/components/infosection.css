@@ -8,3 +8,14 @@
 
     @apply p-2;
 }
+
+.score-item {
+    @apply text-logoTextColor;
+    @apply font-medium;
+    @apply text-4xl;
+}
+
+.delimeter {
+    @apply fill-current text-darkTextColor;
+    @apply mx-4;
+}

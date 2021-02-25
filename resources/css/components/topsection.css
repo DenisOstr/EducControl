@@ -9,7 +9,11 @@
 }
 
 .button-container {
-    @apply flex justify-end items-end;
+    @apply flex justify-end items-center;
+}
+
+.button {
+    @apply focus:outline-none;
 }
 
 .add-button {
@@ -25,4 +29,19 @@
 .add-button-icon {
     @apply fill-current text-white;
     @apply w-8 h-8;
+}
+
+.search-container {
+    @apply flex items-center;
+    @apply border-b-2 border-solid border-lightTextColor;
+    @apply py-2;
+}
+
+.search-input {
+    @apply text-darkTextColor;
+
+    @apply bg-transparent border-none;
+    @apply mr-3 px-2;
+    
+    @apply leading-tight focus:outline-none
 }
