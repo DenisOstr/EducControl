@@ -98,8 +98,13 @@
 
 .button-container {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
+}
+
+.button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .add-button {
@@ -121,6 +126,33 @@
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   height: 2rem;
   width: 2rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  --tw-border-opacity: 1;
+  border-color: rgba(70, 107, 181, var(--tw-border-opacity));
+  border-style: solid;
+  border-bottom-width: 2px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.search-input {
+  --tw-text-opacity: 1;
+  color: rgba(57, 79, 120, var(--tw-text-opacity));
+  background-color: transparent;
+  border-style: none;
+  margin-right: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1.25
+}
+
+.search-input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 .statistics-block {
   --tw-bg-opacity: 1;
@@ -177,6 +209,22 @@
   height: 14rem;
   width: 48%;
   padding: 0.5rem;
+}
+
+.score-item {
+  --tw-text-opacity: 1;
+  color: rgba(8, 182, 129, var(--tw-text-opacity));
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.delimeter {
+  fill: currentColor;
+  --tw-text-opacity: 1;
+  color: rgba(57, 79, 120, var(--tw-text-opacity));
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .table-header {
   --tw-bg-opacity: 1;
