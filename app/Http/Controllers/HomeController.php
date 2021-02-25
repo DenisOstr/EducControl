@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
+
+use App\Models\Groups;
+use App\Models\Projects;
+use App\Models\Students;
 
 class HomeController extends Controller
 {
     public function index() {
-        $groupsTable = DB::table('groups')->get();
-        $projectsTable = DB::table('projects')->get();
-        $studentsTable = DB::table('students')->get();
+        $groupsTable = Groups::all();
+        $projectsTable = Projects::all();
+        $studentsTable = Students::all();
 
         return Inertia::render('Home/Index', ['groups' => $groupsTable, 'projects' => $projectsTable, 'students' => $studentsTable]);
     }
