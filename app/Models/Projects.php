@@ -10,4 +10,8 @@ class Projects extends Model
     use HasFactory;
 
     protected $table = 'projects';
+
+    public function groups() {
+        return $this->hasOne(Groups::class, 'group_id', 'group_id');
+    }
 }

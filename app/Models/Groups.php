@@ -10,4 +10,12 @@ class Groups extends Model
     use HasFactory;
 
     protected $table = 'groups';
+
+    public function projects() {
+        return $this->belongsTo(Projects::class);
+    }
+
+    public function students() {
+        return $this->belongsTo(Students::class);
+    }
 }
