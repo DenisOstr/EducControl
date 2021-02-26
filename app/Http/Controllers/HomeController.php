@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function index() {
         $groupsTable = Groups::all();
-        $projectsTable = Projects::all();
+        $projectsTable = Projects::with('groups')->get();
         $studentsTable = Students::all();
 
         return Inertia::render('Home/Index', ['groups' => $groupsTable, 'projects' => $projectsTable, 'students' => $studentsTable]);
