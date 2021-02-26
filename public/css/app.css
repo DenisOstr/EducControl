@@ -135,8 +135,8 @@
   border-color: rgba(70, 107, 181, var(--tw-border-opacity));
   border-style: solid;
   border-bottom-width: 2px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .search-input {
@@ -266,19 +266,97 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.card {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  height: 14rem;
+  width: 18rem;
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(57, 79, 120, var(--tw-text-opacity));
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.fio {
+  display: flex;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-style: italic;
+}
+
+.item-course {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.item-avatar {
+  --tw-bg-opacity: 1;
+  background-color: rgba(57, 79, 120, var(--tw-bg-opacity));
+  border-radius: 9999px;
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: currentColor;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1.25rem;
+}
+
+.item-title {
+  opacity: 0.7;
+  --tw-text-opacity: 1;
+  color: rgba(57, 79, 120, var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .main {
   height: 100%;
   width: 100%;
   margin: 3.5rem;
 }
 
-.statistics-block, .info-block {
+.statistics-block, .info-block, .card {
   border-radius: 0.5rem;
 }
 
-.statistics-block, .info-block {
+.statistics-block, .info-block, .card {
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.top-table-container {
+  height: 14rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.top-table-heading {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(57, 79, 120, var(--tw-text-opacity));
 }
 /*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
 
