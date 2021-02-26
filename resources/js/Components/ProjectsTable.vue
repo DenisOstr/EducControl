@@ -11,7 +11,7 @@
                 <td>{{ item.project_nr }}</td>
                 <td>{{ item.project_code }}</td>
                 <td>{{ item.project_name }}</td>
-                <td>{{ item.group_name }}</td>
+                <td>{{ item.groups.group_name }}</td>
             </tr>
         </tbody>
     </table>

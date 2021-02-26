@@ -7,8 +7,8 @@
         </thead>
 
         <tbody class="table-body" style="height: 25vh;">
-            <tr v-bind:key="item" v-for="item in sorted" class="table-body-item">
-                <td>{{ item.group_nr }}</td>
+            <tr v-bind:key="item" v-for="item in sortFilter" class="table-body-item">
+                <td>{{ item.group_id }}</td>
                 <td>{{ item.group_code }}</td>
                 <td>{{ item.group_name }}</td>
                 <td>{{ item.students }}</td>
@@ -22,13 +22,14 @@
     export default {
         props: {
             groups: Array,
+            search: '',
         },
         data() {
             return {
-                sortKey: 'group_nr',
+                sortKey: 'group_id',
                 reverse: false,
                 columns: {
-                    'Group Nr.': 'group_nr',
+                    'Group Nr.': 'group_id',
                     'Group code': 'group_code',
                     'Group name': 'group_name',
                     'Students': 'students',
@@ -37,22 +38,10 @@
             }
         },
         computed: {
-            sorted: function() {
-                return this.groups.sort((a, b) => {
-                    let modifier = 1;
-
-                    if (this.reverse === true) {
-                        modifier = -1;
-                    }
-
-                    if (a[this.sortKey] < b[this.sortKey]) {
-                        return -1 * modifier;
-                    } else if (a[this.sortKey] > b[this.sortKey]) {
-                        return 1 * modifier;
-                    }
-
-                    return 0;
-                });
+            sortFilter: function() {
+                return this.groups
+                .filter(this.filterBy)
+                .sort(this.orderBy);
             }
         },
         methods: {
@@ -60,7 +49,33 @@
                 this.reverse = (this.sortKey == sortKey) ? !this.reverse : false;
 
                 this.sortKey = sortKey;
-            }
+            },
+            orderBy: function(a, b) {
+                let modifier = 1;
+
+                if (this.reverse === true) {
+                    modifier = -1;
+                }
+
+                if (a[this.sortKey] < b[this.sortKey]) {
+                    return -1 * modifier;
+                } else if (a[this.sortKey] > b[this.sortKey]) {
+                    return 1 * modifier;
+                }
+
+                return 0;
+            },
+            filterBy: function(group) {
+                if (this.search.length === 0) {
+                    return true;
+                }
+
+                return  (group.group_id.toString().indexOf(this.search) > -1)
+                || (group.group_code.indexOf(this.search) > -1)
+                || (group.group_name.indexOf(this.search) > -1)
+                || (group.students.toString().indexOf(this.search) > -1)
+                || (group.score.toString().indexOf(this.search) > -1);
+            },
         }
     }
 </script>

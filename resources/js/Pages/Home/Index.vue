@@ -7,7 +7,7 @@
 
             <div class="info-blocks">
                 <div class="info-block">
-                    <groups-table :groups="groups" />
+                    <groups-table :groups="groups" :search="nothing()"/>
                 </div>
                 
                 <div class="info-block">
@@ -44,6 +44,9 @@
             },
             route() {
                 return 'students.add'
+            },
+            nothing() {
+                return ''
             }
         }
     }
