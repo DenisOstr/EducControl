@@ -1,0 +1,11 @@
+.top-table-container {
+    @apply w-full h-56 px-2;
+}
+
+.container-header {
+    @apply w-full flex justify-between mb-2;
+}
+
+.top-table-heading {
+    @apply font-semibold text-darkTextColor text-lg;
+}

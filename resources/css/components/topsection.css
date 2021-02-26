@@ -34,7 +34,7 @@
 .search-container {
     @apply flex items-center;
     @apply border-b-2 border-solid border-lightTextColor;
-    @apply py-2;
+    @apply py-1;
 }
 
 .search-input {

@@ -4,7 +4,8 @@
 }
 
 .statistics-block,
-.info-block {
+.info-block,
+.card {
     @apply rounded-lg;
     @apply shadow-md;
 }
@@ -13,3 +14,4 @@
 @import "infographics.css";
 @import "infosection.css";
 @import "tables.css";
+@import "studentcards.css";

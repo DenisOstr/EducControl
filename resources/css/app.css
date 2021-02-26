@@ -10,5 +10,6 @@
 @import "components/base.css";
 @import "components/sidebar.css";
 @import "components/dashboard.css";
+@import "components/groups.css";
 
 @import "tailwindcss/utilities";
