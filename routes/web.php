@@ -9,6 +9,8 @@ Route::get('/', [HomeController::class, 'index']) -> name('home');
 Route::get('/groups', [GroupsController::class, 'index']) -> name('groups');
 Route::get('/students', [StudentsController::class, 'index']) -> name('students');
 
+Route::get('/search', [StudentsController::class, 'search']);
+
 Route::get('/groups/add', [GroupsController::class, 'add']) -> name('groups.add');
 Route::get('/groups/change', [GroupsController::class, 'change']) -> name('groups.change');
 Route::get('/groups/remove', [GroupsController::class, 'remove']) -> name('groups.remove');
